@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .container {
+            background-color: rgb(221, 233, 223);
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 5vw;
+        }
+        button {
+            font-size: 40px;
+        }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #lizard {
+            max-width: 20vw;
+            max-height: 20vw;
+        }
+    </style>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <img src="lizard.png" id="lizard">
+            <div class="btn-container">
+                <button onclick="moveLeft()" id="left">⬅️</button>
+                <button id="up">⬆️</button>
+                <button id="down">⬇️</button>
+                <button id="right">➡️</button>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const moveLeft = () => {
+            const lizard = document.getElementById("lizard");
+            alert(lizard.offsetLeft);
+            lizard.offsetLeft = '50px';
+        }
+    </script>
+</html>
